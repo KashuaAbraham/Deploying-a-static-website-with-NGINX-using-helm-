@@ -1,3 +1,10 @@
+{{- define "my-webserver.name" }}
+my-webserver
+{{- end }}
+
+apiVersion: apps/v1
+kind: Deployment
+
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
